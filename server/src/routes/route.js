@@ -73,13 +73,7 @@ catch(err){
     return res.status(400).send({status:false,message:err.message})
 }
 })
-// router.delete('/deldata',async function(req,res){
-//     let data=req.body
-//     let x=await userModel.findOneAndUpdate({email:data['email'],url:data['url']},{
-//         isDeleted:true
-//     },{new:true})
-//     return res.status(200).send({status:true,message:`user un registered successfully`})
-// })
+
 
 router.get('/data',async function(req,res){
 try{
@@ -148,7 +142,7 @@ const transporter = nodemailer.createTransport({
  },
 });
 
-const sendEmail = (name,email,title,productPrice,link,range,rep) => {
+const sendEmail = (name,email,title,productPrice,link,range) => {
  const mailOptions = {
   from: 'p39744857@gmail.com',
   to: email,
@@ -182,7 +176,7 @@ for(let i=0;i<ab.length;i++){
         ab[i]['email']=resEmail[i]
         ab[i]['range']=resRange[i]
         if(Number(ab[i]['finalprice'])<=Number(resRange[i])){
-        sendEmail(resName[i],resEmail[i],ab[i]['title'],ab[i]['price'],ab[i]['link'],ab[i]['range'],rep)
+        sendEmail(resName[i],resEmail[i],ab[i]['title'],ab[i]['price'],ab[i]['link'],ab[i]['range'])
         }else{
             console.log('sorry your product price havent reached your specified range yet')
             
