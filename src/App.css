@@ -1,17 +1,56 @@
 .App {
-  text-align: center;
+  text-align: top;
+ 
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+  margin-bottom:70px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
+    nav {
+      animation: App-logo-spin infinite 10s linear;
+    }
+  
 }
+.nav{
+  color: #fbe461;
+  text-shadow: #282c34;
+  text-transform: uppercase;
+  text-overflow: clip;
+  margin-top: 100px;
+  font-size: 80px;
+ 
+}
+button{
+  border: 1px solid yellow;
+  border-radius: 50px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right:40px;
+  margin:30px;
+  
+
+}
+.choose{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px;
+}
+.welcome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px;
+}
+
+
+
 
 .App-header {
   background-color: #282c34;
@@ -19,20 +58,132 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration:dashed;
+ 
+}
+*{
+  background-color: #282c34;
+
 }
 
-@keyframes App-logo-spin {
+@keyframes App-logo-spin  {
   from {
-    transform: rotate(0deg);
+    opacity:0;
   }
   to {
-    transform: rotate(360deg);
+    opacity:1;
   }
+
 }
+
+
+
+#name{
+  padding:30px;
+  padding-left:110px;
+  padding-right:110px;
+  color: white;
+
+}
+#email{
+  padding:30px;
+  padding-left:110px;
+  padding-right:110px;
+  color: white;
+}
+#num{
+  padding:30px;
+  padding-left:110px;
+  padding-right:110px;
+  color: white;
+}
+#Link{
+  padding:30px;
+  padding-left:110px;
+  padding-right:110px;
+  color: white;
+
+}
+
+.btn-Head{
+  text-decoration: dashed;
+  color:white;
+  text-shadow: #282c34;
+  text-transform: uppercase;
+  text-overflow: clip;
+  
+}
+.btn-tail{
+  text-decoration: dashed;
+  color:white;
+  text-shadow: #282c34;
+  text-transform: uppercase;
+  text-overflow: clip;
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-Head {
+    animation: App-btn-spin infinite 6s linear;
+  }
+    .btn-tail {
+      animation: App-btn-spin infinite 7s linear;
+    }
+  
+}
+
+@keyframes App-btn-spin   {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+
+}
+
+.btns{
+  background-color:black;
+  display: flex;
+  justify-content: center;
+}
+
+.play{
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+
+
+}
+.heads{
+  display: flex;
+ margin-top: 100px;
+  justify-content: center;
+}
+
+.user{
+  margin-right: 350px;
+  margin-bottom: 100px;
+  padding-right: 80px;
+  padding-bottom: 200px;
+
+}
+
+.pc{
+  margin-left: 300px;
+  margin-bottom: 100px;
+  padding-right: 80px;
+  padding-bottom: 200px;
+
+}
+.buttonClass{
+  margin-left:220px;
+}
+
