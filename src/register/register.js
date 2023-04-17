@@ -72,7 +72,7 @@ else if(data.status===false && data.message===`please enter valid attributes is 
     window.alert(`please fill all required feilds correctly`)
     Navigate('/register')
 }
-else if(data.status==false){
+else if(data.status===false){
   for(let i=0;i<Imparr.length;i++){
     if(data.status===false && data.message===`please enter your ${Imparr[i]}`){
       window.alert(`please enter your ${Imparr[i]}`)
