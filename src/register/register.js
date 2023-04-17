@@ -27,7 +27,7 @@ const postData= async (e)=>{
   e.preventDefault();
   const {name,email,url,range}=user
    
-const res=await fetch('/register',{
+const res=await fetch('https://charmed-woolly-pike.glitch.me/register',{
   method:'POST',
   headers:{
       'Content-Type':"application/json",
@@ -84,7 +84,7 @@ else{
   window.alert(`response saved successfully you will be notified via email when your product reaches your spectified range Thank you!`)
   console.log(data)
  Navigate('/')
- await fetch('http://localhost:4000/data')
+ await fetch('https://charmed-woolly-pike.glitch.me/data')
 }
     }
     return(
