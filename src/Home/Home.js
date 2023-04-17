@@ -1,9 +1,13 @@
 import React from "react";
 import '../App.css';
 import x from '../Images/NavBar'
-
+import {useNavigate} from "react-router-dom";
 
 function Home(){
+  let Navigate=useNavigate()
+  function handlesubmit(){
+    Navigate('/register')
+  }
     return (
         <div className="App">
       <header className="App-header" style={{backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5AIxk_SWNwnscfeLWRIbmdztpmOAIrUyqQ&usqp=CAU")`,backgroundRepeat: "no-repeat",
@@ -14,16 +18,13 @@ function Home(){
         <div className='App-logo'>
       <x.Images1/>
       </div>
-      <button>
-        <a
+      <button
+       
           className="App-link"
-          href="http://localhost:3000/register"
-          target="_blank"
-          rel="noopener noreferrer"
-          
+         onClick={handlesubmit}
         >
           Get Set Go
-        </a>
+      
         </button>
       </header>
       
