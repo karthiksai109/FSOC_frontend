@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom'
 import '../App.css';
@@ -43,28 +43,28 @@ var data=await res.json();
 
 let Imparr=['name','email','url','range']
 
-if(data.status===false && data.message==`please enter valid name`){
+if(data.status===false && data.message===`please enter valid name`){
     window.alert(`please enter valid name`)
     Navigate('/register')
 }
-else if(data.status===false && data.message==`please enter valid email`){
+else if(data.status===false && data.message===`please enter valid email`){
     window.alert(`please enter valid email`)
   
     Navigate('/register')
 }
-else if(data.status===false && data.message==`please enter your produt url`){
+else if(data.status===false && data.message===`please enter your produt url`){
     window.alert(`please provide us your product link`)
     Navigate('/register')
-}else if(data.status===false && data.message==`please enter valid url`){
+}else if(data.status===false && data.message===`please enter valid url`){
   window.alert(`please provide us valid product link`)
   Navigate('/register')
 }
 
-else if(data.status===false && data.message==`email already registered`){
+else if(data.status===false && data.message===`email already registered`){
     window.alert(`you have already registered you will be notified ones your product reaches your specified range`)
     Navigate('/')
 }
-else if(data.status===false && data.message==`please enter a valid natural number as your range` ){
+else if(data.status===false && data.message===`please enter a valid natural number as your range` ){
     window.alert(`please enter a valid natural in range colum`)
     Navigate('/register')
 }
@@ -74,7 +74,7 @@ else if(data.status===false && data.message===`please enter valid attributes is 
 }
 else if(data.status==false){
   for(let i=0;i<Imparr.length;i++){
-    if(data.status===false && data.message==`please enter your ${Imparr[i]}`){
+    if(data.status===false && data.message===`please enter your ${Imparr[i]}`){
       window.alert(`please enter your ${Imparr[i]}`)
       Navigate('/register')
     }
@@ -88,9 +88,9 @@ else{
 }
     }
     return(
-        <div className="App">
-      <header className="App-header" style={{backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5AIxk_SWNwnscfeLWRIbmdztpmOAIrUyqQ&usqp=CAU")`,backgroundRepeat: "no-repeat",
-      backgroundSize: "cover"}}>
+        <div className="App" style={{backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb5AIxk_SWNwnscfeLWRIbmdztpmOAIrUyqQ&usqp=CAU")`,backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"}}>
+      <header className="App-header" >
         <p className="nav">
           <x.NavBar/>
         </p>
