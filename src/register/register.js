@@ -114,17 +114,17 @@ else{
         
         </form>
       </div>
-      <button >
-        <a
+      <button 
+  
           className="App-link"
           target="_blank"
-          href=''
+
           rel="noopener noreferrer"
-          onClick={postData}
-        >
+          onClick={postData}>
+
         submit
-        </a>
         </button>
+    
       </header>
       
       
