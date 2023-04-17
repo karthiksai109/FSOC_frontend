@@ -118,8 +118,8 @@ else{
         <a
           className="App-link"
           target="_blank"
+          href=''
           rel="noopener noreferrer"
-        
           onClick={postData}
         >
         submit
